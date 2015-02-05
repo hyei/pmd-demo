@@ -34,7 +34,7 @@ DEFINES += PMD_HAMP
 #   - The demo can be used with one of the design size
 #       DESIGN_SIZE_XGA
 #       DESIGN_SIZE_720p
-DEFINES += DESIGN_SIZE_720p
+DEFINES += DESIGN_SIZE_XGA
 
 #   - Un-comment following to enable graph scrolling on demo startup
 #DEFINES += ENABLE_GRAPH_SCROLLING
@@ -95,8 +95,8 @@ contains(DEFINES, PMD_HAMP) {
 
 
 contains(DEFINES, DESIGN_SIZE_XGA) {
-  #  FORMS       += XGA/mainwindow.ui
-  #  RESOURCES   += XGA/images.qrc
+    FORMS       += XGA/mainwindow.ui
+    RESOURCES   += XGA/images.qrc
 }
 
 contains(DEFINES, DESIGN_SIZE_720p) {

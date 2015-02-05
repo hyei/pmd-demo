@@ -68,9 +68,9 @@ void HAMPDataSupplier::startStopNucleus(bool flg)
 	if(flg ==true)
 	{
 		/*system("modprobe -r virtio_rpmsg_bus");
-		system("modprobe -r zynq_rpmsg_driver");
-		printf("\nLoading zynq rpmsg driver");
-		system("modprobe zynq_rpmsg_driver");*/
+		system("modprobe -r imx6sx_rpmsg_driver");
+		printf("\nLoading imx6sx rpmsg driver");
+		system("modprobe imx6sx_rpmsg_driver");*/
 
 		printf("\nLoading rpmsg user device driver");
 		system("modprobe rpmsg_user_dev_driver");
@@ -109,10 +109,10 @@ void HAMPDataSupplier::startStopNucleus(bool flg)
 	    pm_data.ecgValue =0;
 	    pm_data.plethValue=0;
 	    emit connectionStatus(false);
-//		printf("\nUnload rpmsg_user_device driver, virtio_rpmsg_bus driver, zynq_rpmsg_driver driver");
-//		system("modprobe -r rpmsg_user_dev_driver");
-//		system("modprobe -r virtio_rpmsg_bus");
-//		system("modprobe -r zynq_rpmsg_driver");
+		printf("\nUnload rpmsg_user_device driver, virtio_rpmsg_bus driver, imx6sx_rpmsg_driver driver");
+		system("modprobe -r rpmsg_user_dev_driver");
+		system("modprobe -r virtio_rpmsg_bus");
+		system("modprobe -r imx6sx_rpmsg_driver");
 	}
 }
 
