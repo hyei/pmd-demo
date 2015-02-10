@@ -32,7 +32,7 @@ HAMPDataSupplier::HAMPDataSupplier(QObject* parent): QObject(parent)
      connect(disTimer, SIGNAL(timeout()), this, SLOT(updateTimer()));
      disTimer->setInterval(50);
      //disTimer->stop();
-     m_screenShortPath=QDir::rootPath() + tr("guest1_rootfs/www/pages/screen-dump.png");
+     m_screenShortPath=QDir::rootPath() + tr("www/pages/screen-dump.png");
 }
 
 HAMPDataSupplier::~HAMPDataSupplier()
